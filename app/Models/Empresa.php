@@ -9,8 +9,6 @@ class Empresa extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    public $timestamps = false;
-
     /**
      * Get the user that owns the Empresa
      *

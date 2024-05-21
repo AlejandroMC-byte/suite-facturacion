@@ -31,7 +31,7 @@ class CategoriaController extends Controller
             $data->urlfoto = Str::slug($request->nombre) . '.'.$image_type;
         }
         $data->slug = Str::slug($request->nombre);
-        $data->save;
+        $data->save();
         return response()->json($data, 200);
     }
     public function show($id){
@@ -58,5 +58,10 @@ class CategoriaController extends Controller
         $data->slug = Str::slug($request->nombre);
         $data->save();
         return response()->json($data, 200);
+    }
+    public function destroy($id){
+        $data = Categoria::find($id);
+        $data->delete();
+        return response()->json("Borrado", 200);
     }
 }

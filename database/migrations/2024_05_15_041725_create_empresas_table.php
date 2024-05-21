@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string("telefono",9);
             $table->string("direccion",50);
             $table->foreignId('categoria_id')->references('id')->on('categorias')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

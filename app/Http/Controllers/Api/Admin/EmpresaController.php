@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class EmpresaController extends Controller
 {
     public function index(){
-        $data = Empresa::orderBy("orden")->get(["id","nombre"]);
+        $data = Empresa::get(["id","nombre"]);
         return response()->json($data, 200);
     }
     function store(Request $request){

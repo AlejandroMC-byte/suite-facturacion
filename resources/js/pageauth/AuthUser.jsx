@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
 const AuthUser = () => {
@@ -49,7 +49,8 @@ const AuthUser = () => {
     token,
     user,
     rol,
-    
+    getToken,getRol,getUser,getLogout
+
   }
 }
 

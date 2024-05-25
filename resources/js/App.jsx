@@ -7,6 +7,9 @@ import { LayoutAdmin } from './layouts/LayoutAdmin';
 import ProtectedRoutes from './pageauth/ProtectedRoutes';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { LayoutClient } from './layouts/LayoutClient';
+//auth
+import Login from './pageauth/Login';
+import Register from './pageauth/Register';
 
 export const App = () => {
   return (
@@ -14,6 +17,8 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<LayoutPublic/>}>
           <Route index element = {<PageHome/>} />
+          <Route path ='/login' element={<Login/>} />
+          <Route path ='/register' element={<Register/>} />
         </Route>
         <Route element={<ProtectedRoutes/>}>
           <Route path="/admin" element={<LayoutAdmin/>}>

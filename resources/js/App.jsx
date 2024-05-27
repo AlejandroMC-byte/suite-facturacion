@@ -10,6 +10,7 @@ import { LayoutClient } from './layouts/LayoutClient';
 //auth
 import Login from './pageauth/Login';
 import Register from './pageauth/Register';
+import Panel from './pageadmin/Panel';
 
 export const App = () => {
   return (
@@ -21,7 +22,7 @@ export const App = () => {
           <Route path ='/register' element={<Register/>} />
         </Route>
         <Route element={<ProtectedRoutes/>}>
-          <Route path="/admin" element={<LayoutAdmin/>}>
+          <Route path="/admin" element={<Panel/>}>
             <Route index element = {<PageHome/>} />
           </Route>
           <Route path="/client" element={<LayoutClient/>}>

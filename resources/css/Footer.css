@@ -1,0 +1,47 @@
+.footer {
+  background-color: #165788; /* Background color */
+  padding: 5px 0; /* Reduce padding */
+  font-size: 14px; /* Adjust font size */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer .social-icons .icon {
+  font-size: 20px; /* Reduce icon size */
+  margin: 0 10px; /* Adjust spacing between icons */
+}
+
+.footer .contact-info ul {
+  padding: 0;
+  list-style: none;
+  font-size: 14px; /* Adjust font size */
+}
+
+.footer .contact-info ul li {
+  margin: 5px 0; /* Reduce margin between list items */
+}
+
+.footer img {
+  max-width: 150px; /* Reduce image size */
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.footer .row {
+  flex: 1;
+}
+footer .row {
+  margin: 0; /* Elimina cualquier margen por defecto */
+  padding: 0; /* Elimina cualquier padding por defecto */
+}
+
+.footer .text-center {
+  padding: 5px 0; /* Reduce el padding del texto */
+  font-size: 10px; /* Ajusta el tamaño del texto */
+}

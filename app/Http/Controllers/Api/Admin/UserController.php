@@ -18,8 +18,6 @@ class UserController extends Controller
     }
     public function update(Request $request,$id){
         // validacion ...
-
-
         $data = User::find($id);
         $data->fill($request->all());
         $data->save();

@@ -1,0 +1,52 @@
+.navbar-custom {
+  background-color: #5474C7; /* Fondo del navbar */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .navbar-toggler-icon {
+  color: #FFFFFF; /* Color del texto */
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+  color: #FFD700; /* Color del texto cuando se coloca el cursor sobre el enlace */
+}
+
+.navbar-custom .navbar-nav .nav-item.active .nav-link,
+.navbar-custom .navbar-nav .nav-item .nav-link.active {
+  color: #14171f; /* Color del texto del enlace activo */
+}
+
+.navbar-custom .dropdown-menu {
+  background-color: #3F4147; /* Fondo del menú desplegable */
+}
+
+.navbar-custom .dropdown-menu .dropdown-item {
+  color: #FFFFFF; /* Color del texto del elemento del menú */
+}
+
+.navbar-custom .dropdown-menu .dropdown-item:hover,
+.navbar-custom .dropdown-menu .dropdown-item:focus {
+  background-color: #252933; /* Fondo del elemento del menú cuando se coloca el cursor sobre él */
+  color: #FFFFFF; /* Color del texto del elemento del menú cuando se coloca el cursor sobre él */
+}
+
+.navbar-custom .btn-outline-success {
+  color: #FFFFFF; /* Color del botón de búsqueda */
+  border-color: #3D70F2; /* Borde del botón de búsqueda */
+}
+
+.navbar-custom .btn-outline-success:hover {
+  background-color: #3D70F2; /* Fondo del botón de búsqueda cuando se coloca el cursor sobre él */
+  color: #FFFFFF; /* Color del texto del botón de búsqueda cuando se coloca el cursor sobre él */
+}
+
+.navbar-custom .form-control {
+  border-color: #565E73; /* Borde del campo de búsqueda */
+}
+
+.navbar-custom .form-control:focus {
+  border-color: #3D70F2; /* Borde del campo de búsqueda cuando está en foco */
+  box-shadow: none; /* Eliminar sombra del campo de búsqueda cuando está en foco */
+}

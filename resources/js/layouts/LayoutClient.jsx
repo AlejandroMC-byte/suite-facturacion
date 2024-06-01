@@ -9,7 +9,7 @@ export const LayoutClient = () => {
   const navigate = useNavigate()
   
   useEffect(()=>{
-    if(getRol!="client"){
+    if(getRol()!="client"){
       navigate("/")
     }
   },[])

@@ -50,6 +50,7 @@ class AuthController extends Controller
 
       $response['token'] = $user->createToken("test")->plainTextToken;
       $response['user'] = $user;
+      $response['message'] = "Logueado correctamente";
       $response['success'] = true;
     }
     return response()->json($response,200);

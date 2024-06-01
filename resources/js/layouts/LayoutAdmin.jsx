@@ -9,14 +9,13 @@ export const LayoutAdmin = () => {
   const navigate = useNavigate()
   
   useEffect(()=>{
-    if(getRol!="admin"){
+    if(getRol()!="admin"){
       navigate("/")
     }
   },[])
     
   return (
     <div>
-      <h1>ADMIN</h1>
       <Navbar/>
       <Outlet/>
       <Footer/>

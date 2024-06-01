@@ -4,10 +4,10 @@ import { Navigate, useNavigate } from 'react-router-dom'
 import AuthUser from './AuthUser'
 
 const Login = () => {
-  const {getToken} = AuthUser()
+  const {getToken, setToken} = AuthUser()
   const [password,setPassword] = useState("")
   const [email,setEmail] = useState("")
-  const [message,setmessage] = useState("")
+  const [message,setMessage] = useState("")
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -19,11 +19,15 @@ const Login = () => {
     e.preventDefault();
     Config.getLogin({email,password})
     .then(({data})=>{
+      console.log(data)
       if(data.success){
-        // navigate("/login")
-        console.log(data)
+        setToken(
+          data.user,
+          data.token,
+          data.user.roles[0].name
+        )
       }else{
-        console.log(data)
+        setMessage(data.message)
       }
     })
   }

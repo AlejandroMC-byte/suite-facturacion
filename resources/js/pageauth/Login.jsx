@@ -2,6 +2,7 @@ import React, { useState , useEffect } from 'react'
 import Config from '../Config'
 import { Navigate, useNavigate } from 'react-router-dom'
 import AuthUser from './AuthUser'
+import axios from 'axios'
 
 const Login = () => {
   const {getToken, setToken} = AuthUser()
@@ -17,19 +18,22 @@ const Login = () => {
   },[])
   const submitLogin = async(e) =>{
     e.preventDefault();
-    Config.getLogin({email,password})
-    .then(({data})=>{
-      console.log(data)
-      if(data.success){
-        setToken(
-          data.user,
-          data.token,
-          data.user.roles[0].name
-        )
-      }else{
-        setMessage(data.message)
-      }
+    await axios.get('/sanctum/csrf-cookie').then((response)=>{
+      Config.getLogin({email,password})
+      .then(({data})=>{
+        console.log(data)
+        if(data.success){
+          setToken(
+            data.user,
+            data.token,
+            data.user.roles[0].name
+          )
+        }else{
+          setMessage(data.message)
+        }
+      })
     })
+    
   }
   return (
     <div className='container'>

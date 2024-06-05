@@ -7,8 +7,9 @@ export const Navbar = () => {
   const logoutUser = () =>{
     Config.getLogout('/logout')
     .then(response=>{
-      console.log(response)
-      getLogout();
+      getLogout()
+    }).catch(error =>{
+      console.error(error);
     })
   }
   const renderLinks = () =>{

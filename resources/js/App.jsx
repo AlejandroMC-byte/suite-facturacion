@@ -27,7 +27,7 @@ export const App = () => {
           <Route path="/admin" element={<LayoutAdmin/>}>
             <Route index element = {<PanelAdmin/>} />
           </Route>
-          <Route path="/client" element={<PanelClient/>}>
+          <Route path="/client" element={<LayoutClient/>}>
             <Route index element = {<PageHome/>} />
             <Route index element = {<PanelClient/>} />
           </Route>
